@@ -1,0 +1,39 @@
+@use 'variables.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+	overflow: overlay;
+	color: $color-gray800;
+	background-color: $color-gray50;
+	font: 400 1rem / 1.25 Inter, Avenir, Helvetica, Arial, sans-serif;
+
+	&.hidden {
+		overflow: hidden;
+		-webkit-overflow-scrolling: touch;
+	}
+}
+
+// Scrollbar
+* {
+	scrollbar-width: auto;
+	scrollbar-color: $color-blue400 transparent;
+}
+
+*::-webkit-scrollbar {
+	width: 0.25rem;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	background-color: $color-blue400;
+}
+
+@media (max-width: $breakpoint-sm) {
+	::-webkit-scrollbar {
+		-webkit-appearance: none;
+	}
+}

@@ -1,0 +1,83 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+	width: 100%;
+	padding-top: 1rem;
+	position: relative;
+	padding-bottom: 1rem;
+	background-color: $color-blue600;
+
+	img {
+		width: 7rem;
+		height: auto;
+		cursor: pointer;
+		transition: transform 400ms ease;
+
+		&:hover {
+			transform: scale(0.95);
+		}
+	}
+
+	nav {
+		top: 0;
+		flex: 1;
+		left: -13rem;
+		height: 100vh;
+		z-index: 999;
+		position: absolute;
+		transition: left 400ms ease;
+		padding: 2rem 5rem 2rem 2rem;
+		background-color: $color-blue600;
+
+		&.visible {
+			left: 0;
+		}
+	}
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.list {
+	gap: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	li {
+		display: flex;
+	}
+}
+
+.icon {
+	color: $color-gray25;
+	font-size: $fontSize-t2;
+}
+
+@media (min-width: $breakpoint-sm) {
+	.container {
+		nav {
+			padding: 0;
+			height: auto;
+			position: static;
+			background-color: transparent;
+
+			&.visible {
+				left: 0;
+			}
+		}
+	}
+
+	.list {
+		gap: 2rem;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+
+	.icon {
+		display: none;
+	}
+}

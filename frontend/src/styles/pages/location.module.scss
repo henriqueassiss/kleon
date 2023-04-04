@@ -1,0 +1,54 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+	background-color: $color-gray100;
+}
+
+.wrapper {
+	gap: 1rem;
+	display: flex;
+	align-items: center;
+	padding-top: 1.75rem;
+	flex-direction: column;
+	padding-bottom: 1.75rem;
+}
+
+.cards {
+	width: 100%;
+	gap: 0.75rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: column;
+}
+
+.loading {
+	width: auto;
+	height: auto;
+}
+
+@media (min-width: $breakpoint-sm) {
+	.wrapper {
+		justify-content: center;
+		min-height: 34.125rem;
+	}
+
+	.cards {
+		flex-direction: row;
+		align-items: baseline;
+		justify-content: center;
+	}
+}
+
+@media (min-width: $breakpoint-lg) {
+	.wrapper {
+		min-height: 37.6rem;
+		justify-content: center;
+	}
+
+	.cards {
+		flex-direction: row;
+		align-items: baseline;
+		justify-content: center;
+	}
+}

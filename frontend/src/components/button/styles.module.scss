@@ -1,0 +1,74 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+	gap: 0.5rem;
+	display: flex;
+	cursor: pointer;
+	font-weight: 600;
+	position: relative;
+	align-items: center;
+	font-size: $fontSize-md;
+	justify-content: center;
+	border-radius: $radius-sm;
+	padding: 0.75rem 1.125rem;
+	transition: all 400ms ease;
+	border: 2px solid transparent;
+
+	.img {
+		width: 1rem;
+	}
+
+	&.white {
+		color: $color-blue600;
+		background-color: $color-gray25;
+
+		&:hover {
+			transform: scale(0.95);
+			background-color: $color-blue300;
+		}
+
+		&:disabled {
+			pointer-events: none;
+			background-color: $color-gray300;
+		}
+	}
+
+	&.white2 {
+		color: $color-blue600;
+		border-color: $color-blue600;
+		background-color: $color-gray25;
+
+		&:hover {
+			color: $color-blue400;
+			transform: scale(0.95);
+			border-color: $color-blue400;
+		}
+
+		&:disabled {
+			pointer-events: none;
+			color: $color-gray400;
+			border-color: $color-gray400;
+		}
+	}
+
+	&.blue {
+		color: $color-gray25;
+		background-color: $color-blue600;
+
+		&:hover {
+			transform: scale(0.95);
+			background-color: $color-blue700;
+		}
+
+		&:disabled {
+			pointer-events: none;
+			background-color: $color-blue400;
+		}
+	}
+}
+
+@media (min-width: $breakpoint-xs) {
+	.container {
+		max-width: 24rem;
+	}
+}

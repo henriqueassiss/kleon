@@ -1,0 +1,8 @@
+backend/temp
+data/postgresdb
+tmp
+frontend/node_modules
+frontend/.next/
+frontend/build
+frontend/yarn-debug.log*
+frontend/yarn-error.log*

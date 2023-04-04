@@ -1,0 +1,54 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+	gap: 0.75rem;
+	display: flex;
+	padding-top: 2rem;
+	min-height: 83.25vh;
+	padding-bottom: 2rem;
+	flex-direction: column;
+	justify-content: center;
+
+	h2 {
+		line-height: 1;
+		font-weight: 600;
+		text-align: center;
+		font-size: $fontSize-t1;
+	}
+
+	form {
+		gap: 1.25rem;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.description {
+	text-align: center;
+	color: $color-gray600;
+}
+
+@media (min-width: $breakpoint-xs) {
+	.container {
+		max-width: 24rem;
+	}
+}
+
+@media (min-width: $breakpoint-sm) {
+	.container {
+		min-height: 85.25vh;
+	}
+}
+
+@media (min-width: $breakpoint-md) {
+	.container {
+		min-height: 84.25vh;
+	}
+}
+
+@media (min-width: $breakpoint-lg) {
+	.container {
+		padding-top: 3rem;
+		padding-bottom: 4rem;
+	}
+}

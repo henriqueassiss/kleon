@@ -1,0 +1,8 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+	inset: 0;
+	position: absolute;
+	background-color: #000000bf;
+	backdrop-filter: blur(0.25rem);
+}

@@ -1,0 +1,70 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+	inset: 0;
+	height: 100vh;
+	z-index: 9999;
+	display: flex;
+	padding: 1.25rem;
+	position: absolute;
+}
+
+.wrapper {
+	gap: 1rem;
+	display: flex;
+	padding: 1.75rem;
+	margin-top: auto;
+	max-height: 42.5rem;
+	align-items: center;
+	margin-bottom: auto;
+	flex-direction: column;
+	justify-content: center;
+	max-width: $breakpoint-md;
+	border-radius: $radius-sm;
+	background-color: $color-blue600;
+
+	h2 {
+		width: 100%;
+		font-weight: 700;
+		text-align: center;
+		color: $color-gray25;
+		font-size: $fontSize-xl;
+	}
+
+	div {
+		gap: 1rem;
+		height: 80%;
+		display: flex;
+		overflow: auto;
+		flex-direction: column;
+	}
+
+	p {
+		text-align: center;
+		color: $color-gray25;
+	}
+}
+
+@media (min-width: $breakpoint-xs) {
+	.wrapper {
+		h2 {
+			text-align: left;
+		}
+
+		p {
+			text-align: left;
+		}
+	}
+}
+
+@media (min-width: $breakpoint-sm) {
+	.wrapper {
+		max-height: 32.5rem;
+	}
+}
+
+@media (min-width: $breakpoint-md) {
+	.wrapper {
+		max-height: 27rem;
+	}
+}

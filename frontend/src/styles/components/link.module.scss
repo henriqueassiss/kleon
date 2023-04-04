@@ -1,0 +1,26 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+	cursor: pointer;
+	font-weight: 600;
+	width: fit-content;
+	transition: color 400ms ease, transform 400ms ease;
+
+	&.white {
+		color: $color-gray25;
+
+		&:hover {
+			color: $color-blue300;
+			transform: scale(0.95);
+		}
+	}
+
+	&.blue {
+		color: $color-blue600;
+
+		&:hover {
+			color: $color-blue800;
+			transform: scale(0.95);
+		}
+	}
+}
