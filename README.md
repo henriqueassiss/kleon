@@ -1,8 +1,19 @@
 # Hello!
 
 This is a full stack app built with Next.js, Golang, Docker and PostgreSQL.
+
 There are some special concepts about a real app, like api, fetching data, database connection, env vars, styling, image serving, docker and so on.
+
 Leave a star if you like it! :D
+
+Home Page
+![alt text](images/Home.png)
+
+Sign In Page
+![alt text](images/Sign%20in.png)
+
+Sign Up Page
+![alt text](images/Sign%20up.png)
 
 ## Important
 
