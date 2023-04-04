@@ -5,7 +5,7 @@ import (
 	"log"
 )
 
-var createContactsQuery = `INSERT INTO contacts (id, name, email, phone_number, company, job_title, created_at, updated_at)
+var createContactsQuery = `INSERT INTO contacts (id, full_name, email, phone_number, company, job_title, created_at, updated_at)
 VALUES
 (1, 'John Smith', 'john.smith@example.com', '+1-555-555-5551', 'ABC Corp', 'Sales Manager', NOW(), NOW()),
 (2, 'Mary Johnson', 'mary.johnson@example.com', '+1-555-555-5552', 'XYZ Inc', 'Marketing Director', NOW(), NOW()),
@@ -30,7 +30,7 @@ VALUES
 (21, 'Alex Chen', 'alex.chen@example.com', '+1-555-555-5571', 'ABC Corp', 'Marketing Manager', NOW(), NOW()),
 (22, 'Bob Jackson', 'bob.jackson@example.com', '+1-555-555-5572', 'ABC Corp', 'Tech Lead', NOW(), NOW()),
 (23, 'Thomas Brown', 'thomas.brown@example.com', '+1-555-555-5573', 'Globe Corp', 'CMO', NOW(), NOW()),
-(24, 'John Miller', 'john.miller@example.com', '+1-555-555-5574', 'XYZ Corp', 'Product Manager', NOW(), NOW()),
+(24, 'John Miller', 'john.miller@example.com', '+1-555-555-5574', 'XYZ Corp', 'Product Manager', NOW(), NOW())
 ON CONFLICT DO NOTHING;`
 
 func InsertFakeData() error {

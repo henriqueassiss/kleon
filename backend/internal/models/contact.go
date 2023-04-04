@@ -12,14 +12,14 @@ type Contact struct {
 	FullName    string    `json:"fullName" db:"full_name"`
 	Email       string    `json:"email" db:"email"`
 	PhoneNumber string    `json:"phoneNumber" db:"phone_number"`
-	Company     uint64    `json:"company" db:"company"`
+	Company     string    `json:"company" db:"company"`
 	JobTitle    string    `json:"jobTitle" db:"job_title"`
 	CreatedAt   time.Time `json:"createdAt" db:"created_at"`
 	UpdatedAt   time.Time `json:"updatedAt" db:"updated_at"`
 }
 
-func (u *Contact) FindContacts(offset string) ([]Contact, error) {
-	c := []Contact{}
-	err := p.DB.Select(c, q.FindContactsQuery, offset)
-	return c, err
+func (c *Contact) FindContacts(offset string) ([]Contact, error) {
+	cs := []Contact{}
+	err := p.DB.Select(&cs, q.FindContactsQuery, offset)
+	return cs, err
 }

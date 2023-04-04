@@ -22,5 +22,7 @@ func Router() *chi.Mux {
 	r.Use(m.SetHeaders)
 	r.Mount("/api", r)
 	r.Mount("/user", UserRouter())
+	r.Mount("/contact", ContactRouter())
+	r.Mount("/public", PublicRouter())
 	return r
 }
