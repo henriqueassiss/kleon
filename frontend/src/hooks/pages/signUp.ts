@@ -43,7 +43,7 @@ const useSignUp = () => {
 		if (!ValidateEmail(email) || !ValidatePassword(password)) {
 			Toast({
 				message:
-					'Ops... Houve algum erro, verifique se todos os campos estão preenchidos corretamente.',
+					'Oops... There was an error, check if all fields are filled correctly.',
 				type: 'error',
 			});
 			return;
@@ -54,14 +54,14 @@ const useSignUp = () => {
 		if (!success) {
 			Toast({
 				message:
-					'Ops... Houve algum erro, verifique se os seus dados estão corretos.',
+					'Oops... There was an error, check if all fields are filled correctly.',
 				type: 'error',
 			});
 			return;
 		}
 
 		Toast({
-			message: 'Você criou a sua conta, seja bem-vindo!',
+			message: 'You signed up, welcome!',
 			type: 'success',
 		});
 

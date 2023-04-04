@@ -22,39 +22,39 @@ const SignIn = () => {
 	return (
 		<main>
 			<Wrapper className={styles.container}>
-				<h2>Acessar Conta</h2>
+				<h2>Sign In</h2>
 
 				<p className={styles.description}>
-					Preencha suas informações nos campos
+					Fill the fields with your
 					<br />
-					abaixo para acessar sua conta.
+					account info to sign in.
 				</p>
 
 				<form onSubmit={handleSignIn}>
 					<Input
 						value={email}
-						label="E-mail"
+						label="Email"
 						onChange={handleEmail}
-						placeholder="Digite seu e-mail"
+						placeholder="Type your email"
 					/>
 
 					<Password
-						label="Senha"
+						label="Password"
 						value={password}
 						isVisible={isVisible}
 						onChange={handlePassword}
 						onClick={handleVisibility}
-						placeholder="Digite sua senha"
+						placeholder="Type your password"
 					/>
 
 					<Link
 						href="/recover-password"
 						className={`${linkStyles.container} ${linkStyles.blue}`}>
-						Esqueci a senha
+						Forgot password
 					</Link>
 
 					<Button theme="blue" isLoading={isLoading}>
-						Entrar
+						Sign In
 					</Button>
 				</form>
 			</Wrapper>

@@ -22,40 +22,40 @@ const SignUp = () => {
 	return (
 		<main>
 			<Wrapper className={styles.container}>
-				<h2>Criar Conta</h2>
+				<h2>Sign Up</h2>
 
 				<p className={styles.description}>
-					Preencha suas informações nos campos
+					Fill the fields with your
 					<br />
-					abaixo para criar sua conta.
+					account info to sign up.
 				</p>
 
 				<form onSubmit={handleSignUp}>
 					<Input
-						label="Nome"
+						label="Name"
 						value={name}
 						onChange={handleName}
-						placeholder="Digite seu nome"
+						placeholder="Type your name"
 					/>
 
 					<Input
 						value={email}
-						label="E-mail"
+						label="Email"
 						onChange={handleEmail}
-						placeholder="Digite seu e-mail"
+						placeholder="Type your email"
 					/>
 
 					<Password
-						label="Senha"
+						label="Password"
 						value={password}
 						isVisible={isVisible}
 						onChange={handlePassword}
 						onClick={handleVisibility}
-						placeholder="Digite sua senha"
+						placeholder="Type your password"
 					/>
 
 					<Button theme="blue" isLoading={isLoading}>
-						Cadastrar
+						Sign Up
 					</Button>
 				</form>
 			</Wrapper>

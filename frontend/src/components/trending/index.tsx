@@ -19,15 +19,15 @@ const Trending = () => {
 		<section className={styles.container}>
 			<Wrapper className={styles.wrapper}>
 				<h2>
-					Contatos
+					Popular
 					<br />
-					<span className={styles.highlight}>Populares</span>
+					<span className={styles.highlight}>Contacts</span>
 				</h2>
 
 				<p className={styles.description}>
-					Estes são os contatos populares do
+					These are the month popular contacts
 					<br />
-					mês para criar o seu networking.
+					to help you build your networking.
 				</p>
 
 				<div className={styles.cards}>

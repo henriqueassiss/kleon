@@ -1,3 +1,3 @@
 export const data = {
-	copy: `Todos os direitos reservados - Kleon ${new Date().getFullYear()}`,
+	copy: `All rights are free - Kleon ${new Date().getFullYear()}`,
 };

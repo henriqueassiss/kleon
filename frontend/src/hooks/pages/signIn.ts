@@ -36,7 +36,7 @@ const useSignIn = () => {
 		if (!ValidateEmail(email) || !ValidateBasicPassword(password)) {
 			Toast({
 				message:
-					'Ops... Houve algum erro, verifique se todos os campos estão preenchidos corretamente.',
+					'Oops... There was an error, check if all fields are filled correctly.',
 				type: 'error',
 			});
 			return;
@@ -47,14 +47,14 @@ const useSignIn = () => {
 		if (!success) {
 			Toast({
 				message:
-					'Ops... Houve algum erro, verifique se todos os campos estão preenchidos corretamente.',
+					'Oops... There was an error, check if all fields are filled correctly.',
 				type: 'error',
 			});
 			return;
 		}
 
 		Toast({
-			message: 'Você acessou a sua conta, seja bem-vindo novamente!',
+			message: 'You signed in, welcome again!',
 			type: 'success',
 		});
 
