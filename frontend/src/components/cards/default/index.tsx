@@ -2,51 +2,49 @@ import styles from './styles.module.scss';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import blankLocation from '@public/svgs/BlankUser.svg';
-import {
-	IoCall,
-	IoMail,
-	IoMailOutline,
-	IoPhonePortraitOutline,
-} from 'react-icons/io5';
+import { IoCall, IoMail } from 'react-icons/io5';
 
 export type TCardDefault = {
-	image: string;
-	name: string;
-	role: string;
+	id: string;
+	fullName: string;
+	jobTitle: string;
 	company: string;
 	email: string;
 	phoneNumber: string;
 };
 
 const CardDefault = ({
-	image,
-	name,
-	role,
+	id,
+	fullName,
+	jobTitle,
 	company,
 	email,
 	phoneNumber,
 }: TCardDefault) => {
-	const initials = name.split(' ')[0][0] + name.split(' ')[1][0];
+	const image = process.env.NEXT_PUBLIC_API_PUBLIC_URL + id;
+	const initials = fullName.split(' ')[0][0] + fullName.split(' ')[1][0];
 
 	return (
-		<Link href={'/'} className={styles.container}>
+		<div className={styles.container}>
 			<div className={styles.wrapper}>
 				<div className={styles.wrapperHeader}>
 					<Image
 						priority
-						sizes="384"
+						width={384}
+						unoptimized
+						src={image}
+						height={384}
+						loader={() => image}
 						alt="Imagem do contato"
-						src={image || blankLocation}
 					/>
 
 					<span>{initials}</span>
 				</div>
 
-				<h3 className={styles.name}>{name}</h3>
+				<h3 className={styles.name}>{fullName}</h3>
 
 				<div className={styles.job}>
-					<span>{role} at</span>
+					<span>{jobTitle} at</span>
 					<span>{company}</span>
 				</div>
 
@@ -60,7 +58,7 @@ const CardDefault = ({
 					<span>{email}</span>
 				</div>
 			</div>
-		</Link>
+		</div>
 	);
 };
 
