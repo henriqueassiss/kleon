@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 
 	m "github.com/henriqueassiss/kleon/internal/models"
@@ -31,6 +32,7 @@ func CreateUserHandler(w http.ResponseWriter, r *http.Request) {
 
 	id, jwt, err := s.CreateUserService(u)
 	if err != nil {
+		fmt.Println(err)
 		if err.Error() == "user already exists" {
 			res.Respond(w, false, nil, http.StatusForbidden)
 		} else {

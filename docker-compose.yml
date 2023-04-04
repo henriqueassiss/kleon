@@ -7,9 +7,10 @@ services:
             - 5000:5000
         env_file: .env
         command: air
-        restart: on-failure
+        restart: always
         depends_on:
             - postgres
+            - migrate
         volumes:
             - ./backend:/app
         networks:

@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS users
     role_id               SMALLINT                 NOT NULL REFERENCES roles ON DELETE CASCADE,
     full_name             VARCHAR(64)              NOT NULL,
     email                 VARCHAR(64)              NOT NULL UNIQUE,
-    password              VARCHAR(24)              NOT NULL,
+    password              VARCHAR(255)              NOT NULL,
 	sign_in_date          TIMESTAMP WITH TIME ZONE NOT NULL,
     created_at            TIMESTAMP WITH TIME ZONE NOT NULL,
     updated_at            TIMESTAMP WITH TIME ZONE NOT NULL

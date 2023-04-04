@@ -7,16 +7,12 @@ import { ChangeEvent, FormEvent, useContext, useEffect, useState } from 'react';
 
 const useSignUp = () => {
 	const { isAuthenticated, authenticate } = useContext(AuthContext);
-	const [isBrazilianDocument, setIsBrazilianDocument] = useState('true');
-	const [nationalId, setNationalId] = useState('');
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [isVisible, setIsVisible] = useState(false);
 	const { isLoading, makeRequest } = useDefaultApiRequest('/user/create', {
 		roleId: 2,
-		isBrazilianDocument: isBrazilianDocument === 'true',
-		nationalId,
 		name,
 		email,
 		password,
@@ -69,8 +65,6 @@ const useSignUp = () => {
 	};
 
 	return {
-		isBrazilianDocument,
-		nationalId,
 		name,
 		email,
 		password,

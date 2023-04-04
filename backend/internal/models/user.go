@@ -111,7 +111,7 @@ func (u *User) ComparePasswordHash(storedPasswordHash string) error {
 }
 
 func (u *User) Validate() bool {
-	if u.RoleID == 0 || !v.ValidateFullName(u.FullName) || !v.ValidateEmail(u.Email) || !v.ValidatePassword(u.Password) {
+	if u.RoleID == 0 || !v.ValidateEmail(u.Email) || !v.ValidatePassword(u.Password) {
 		return false
 	}
 
