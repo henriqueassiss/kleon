@@ -1,17 +1,17 @@
 import CardDefault, { TCardDefault } from '@/components/cards/default';
 
 import { getReq } from '@/lib/swr';
-// import useSWR from 'swr';
+import useSWR from 'swr';
 import styles from './styles.module.scss';
 import Image from 'next/image';
 import loader from '@public/svgs/Loaderblue.svg';
 import Wrapper from '@/components/layouts/wrapper';
 
 const Trending = () => {
-	// const { data, isLoading } = useSWR<TResponse<TCardDefault[]>>(
-	// 	'/location/trending',
-	// 	getReq,
-	// );
+	const { data, isLoading } = useSWR<TResponse<TCardDefault[]>>(
+		'/location/trending',
+		getReq,
+	);
 
 	const data = [
 		{
