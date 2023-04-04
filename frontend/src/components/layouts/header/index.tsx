@@ -36,22 +36,13 @@ const Header = () => {
 							</li>
 						))}
 						{isAuthenticated ? (
-							<>
-								<li>
-									<Link
-										href="/profile"
-										className={`${linkStyles.container} ${linkStyles.white}`}>
-										Perfil
-									</Link>
-								</li>
-								<li>
-									<button
-										onClick={signOut}
-										className={`${linkStyles.container} ${linkStyles.white}`}>
-										Sair
-									</button>
-								</li>
-							</>
+							<li>
+								<button
+									onClick={signOut}
+									className={`${linkStyles.container} ${linkStyles.white}`}>
+									Sair
+								</button>
+							</li>
 						) : (
 							<>
 								<li>
