@@ -43,6 +43,30 @@
 	height: auto;
 }
 
+.pages {
+	gap: 1rem;
+	display: flex;
+	margin-top: 1rem;
+
+	button {
+		width: 2.5rem;
+		height: 2.5rem;
+		color: $color-gray25;
+		font-size: $fontSize-xl;
+		border-radius: $radius-xs;
+		transition: opacity 400ms ease;
+		background-color: $color-blue500;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		&.active {
+			background-color: $color-blue700;
+		}
+	}
+}
+
 @media (min-width: $breakpoint-sm) {
 	.cards {
 		flex-direction: row;
